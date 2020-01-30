@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+<h1 id="title"> Survey Form </h1>
+<div id="form-outer">
+  <p id="description"> How can we improve our service </p>
+  <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.org">
+    <div class="labels">
+      <label id="name-label" for="name">* Name: </label>
+    </div>
+    <div class="rightTab">
+      <input autofocus type="text" name="name" id="name" class="input-field"
+placeholder="Enter your Full Name" required>
+    </div>
+     
+    <div class="labels">
+      <label id="email-label" for="email">* Email: </label>
+    </div>
+    <div class="rightTab">
+      <input autofocus type="email" name="email" id="email" class="input-field"
+placeholder="Enter your Email" required>
+    </div>
+    
+    <div class="labels">
+      <label id="number-label" for="number">* Phone Number (+91): </label>
+    </div>
+    <div class="rightTab">
+      <input autofocus type="number" name="number" id="number" class="input-field" min="1111111111" max="9999999999" maxlength="10" placeholder="Enter your Contact Number" required>
+    </div>
+    
+    <div class="labels">
+        <label for="currentPos">How satisfied were you with our service?</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+      <option disabled value>Select an option</option>
+      <option value="very satisfied">Very Satisfied</option>
+      <option value="satisfied">Satisfied</option>
+      <option value="neutral">Neutral</option>
+      <option value="dissatisfied">Dissatisfied</option>
+      <option value="very dissatisfied">Very Dissatisfied</option>
+    </select>
+      </div>
+    
+    <div class="labels">
+        <label for="userRating">* How likely is that you would recommend to a friend?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    
+    <div class="labels">
+        <label for="preferences">Problems you faced with our network<br>(Check all that apply): </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Lower Speeds than promised</label></li>
+          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Intermittent problems when connected</li>
+          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Inability to connect to Internet</label></li>
+          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Random Outages of less than an hour</label></li>
+          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Outages of an hour or more</label></li>
+          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Outages of more than a day</label></li>
+          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Other</label></li>
+        </ul>
+      </div>
+    
+    <div class="labels">
+        <label for="comments">Elaborate above problems here: </label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comments here..."></textarea>
+      </div>
+    <div>
+<button id="submit" type="submit">Submit</button>
+    </div>
+</form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
